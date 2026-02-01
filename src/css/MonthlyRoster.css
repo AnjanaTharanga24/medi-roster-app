@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.roster-container {
+  padding: 30px;
+  background: #f5f8fb;
+  min-height: 100vh;
+}
+
+/* Header */
+.roster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roster-header h2 {
+  color: #0d47a1;
+}
+
+.roster-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: #1976d2;
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.roster-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px;
+}
+
+.roster-table th,
+.roster-table td {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.roster-table th {
+  background: #e3f2fd;
+  font-weight: 600;
+}
+
+/* Sticky Nurse Column */
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background: #ffffff;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Shift cell */
+.shift-cell {
+  color: #757575;
+}
+
+/* Legend */
+.legend {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 360px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+  color: #0d47a1;
+}
+
+/* Form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.form-group input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
