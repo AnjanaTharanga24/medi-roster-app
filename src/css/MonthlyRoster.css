@@ -15,9 +15,51 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
-.roster-header h2 { color: #0d47a1; margin: 0; }
-.roster-actions   { display: flex; gap: 12px; }
+
+.roster-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.roster-header h2 { 
+  color: #0d47a1; 
+  margin: 0; 
+}
+
+/* Month Selector */
+.month-dropdown {
+  padding: 8px 12px;
+  border: 2px solid #1976d2;
+  border-radius: 6px;
+  background: white;
+  color: #0d47a1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  min-width: 180px;
+}
+
+.month-dropdown:hover {
+  background: #e3f2fd;
+}
+
+.month-dropdown:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+.roster-actions { 
+  display: flex; 
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 .btn {
   padding: 10px 16px;
@@ -26,12 +68,38 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
 }
-.btn.primary         { background: #1976d2; color: #fff; }
-.btn.primary:hover   { background: #1565c0; }
-.btn.secondary       { background: #fff; border: 2px solid #1976d2; color: #1976d2; }
-.btn.secondary:hover { background: #e3f2fd; }
+
+.btn.primary {
+  background: #1976d2;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #1565c0;
+}
+
+.btn.secondary {
+  background: #fff;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+.btn.secondary:hover {
+  background: #e3f2fd;
+}
+
+.btn.download {
+  background: #43a047;
+  color: #fff;
+}
+.btn.download:hover {
+  background: #388e3c;
+}
+.btn.download:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
 
 /* ===== Legend ===== */
 .legend {
@@ -149,7 +217,7 @@
 .popup-nurse  { font-weight: 600; font-size: 13px; color: #263238; }
 .popup-day    { font-size: 12px;  color: #78909c;  margin-left: 3px; }
 
-/* Single-column list — no grid, no overflow */
+/* Single-column list */
 .popup-list {
   display: flex;
   flex-direction: column;
